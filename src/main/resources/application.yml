@@ -1,0 +1,11 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          # we can use on of the following uri to point to the authorization server ( issuer-uri OR jwk-set-uri )
+          #issuer-uri: http://localhost:8080/auth/realms/apps-developer-blog/protocol
+          jwk-set-uri: http://localhost:8080/auth/realms/apps-developer-blog/protocol/openid-connect/certs
+
+server:
+  port: 8081
